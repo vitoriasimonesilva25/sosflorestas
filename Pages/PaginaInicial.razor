@@ -1,0 +1,40 @@
+﻿
+<MudText Typo="Typo.h5" Style="text-align:center;">Proteja as Florestas, Preserve a Vida</MudText>
+<MudDivider></MudDivider>
+<MudCard>
+
+    <MudCardContent>
+        @if(statusVideo == false){
+            <div style="display:flex; justify-content:center;">
+                <MudProgressCircular Color="Color.Success" Indeterminate="true" />
+            </div>
+        }
+
+        @if (statusVideo == true)
+        {
+            <iframe style="width:100%; height:315px;"
+            src="https://www.youtube.com/embed/C-wuam2lGjs"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+            </iframe>
+        }
+
+    </MudCardContent>
+
+</MudCard>
+<MudDivider></MudDivider>
+<MudText Typo="Typo.h5" Style="text-align:center;">"Juntos podemos salvar nossas florestas e o futuro do planeta!"</MudText>
+
+
+
+
+@code {
+    public bool statusVideo = false;
+
+    protected override async Task  OnInitializedAsync(){
+        await Task.Delay(1000);
+        statusVideo = true;
+        StateHasChanged();
+    }
+}

@@ -1,0 +1,77 @@
+﻿<MudText Style="text-align:center" Typo="Typo.h4">Impactos do desmatamento</MudText>
+
+
+@*Keyframes by https://animate.style/*@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+<style type="text/css">
+
+    .bounceIn {
+        opacity: 0;
+        animation-delay: 0.5s;
+        animation-duration: 0.5s;
+        animation-name: bounceIn;
+        animation-fill-mode: forwards;
+    }
+
+    .bounceOut {
+        animation-duration: 0.5s;
+        animation-name: bounceOut;
+        animation-fill-mode: forwards;
+    }
+
+    .backInDown {
+        opacity: 0;
+        animation-delay: 0.5s;
+        animation-duration: 0.5s;
+        animation-name: backInDown;
+        animation-fill-mode: forwards;
+    }
+
+    .backOutDown {
+        animation-duration: 0.5s;
+        animation-name: backOutDown;
+        animation-fill-mode: forwards;
+    }
+
+    .rotateIn {
+        opacity: 0;
+        animation-delay: 0.5s;
+        animation-duration: 0.5s;
+        animation-name: rotateIn;
+        animation-fill-mode: forwards;
+    }
+
+    .rotateOut {
+        animation-duration: 0.5s;
+        animation-name: rotateOut;
+        animation-fill-mode: forwards;
+    
+</style>
+
+<MudCarousel Class="mud-width-full" Style="height:300px;" TData="object" AutoCycle="true">
+    <MudCarouselItem Color="@Color.Tertiary" Transition="Transition.Slide">
+        <div class="d-flex" style="height:100%">
+            <img class="mx-auto my-auto" src="dsm1.jpg" alt="Impacto 1" style="max-height: 100%; max-width: 100%;" />
+        </div>
+    </MudCarouselItem>
+    <MudCarouselItem Color="@Color.Tertiary" Transition="Transition.Fade">
+        <div class="d-flex" style="height:100%">
+            <img class="mx-auto my-auto" src="dsm2.jpeg" alt="Impacto 2" style="max-height: 100%; max-width: 100%;" />
+        </div>
+    </MudCarouselItem>
+    <MudCarouselItem Color="@Color.Tertiary" Transition="Transition.Custom" CustomTransitionEnter="bounceIn" CustomTransitionExit="bounceOut">
+        <div class="d-flex" style="height:100%">
+            <img class="mx-auto my-auto" src="dsm3.jpg" alt="Impacto 3" style="max-height: 100%; max-width: 100%;" />
+        </div>
+    </MudCarouselItem>
+    <MudCarouselItem Color="@Color.Tertiary" Transition="Transition.Custom" CustomTransitionEnter="backInDown" CustomTransitionExit="backOutDown">
+        <div class="d-flex" style="height:100%">
+            <img class="mx-auto my-auto" src="dsm4.jpg" alt="Impacto 4" style="max-height: 100%; max-width: 100%;" />
+        </div>
+    </MudCarouselItem>
+    <MudCarouselItem Color="@Color.Tertiary" Transition="Transition.Custom" CustomTransitionEnter="rotateIn" CustomTransitionExit="rotateOut">
+        <div class="d-flex" style="height:100%">
+            <img class="mx-auto my-auto" src="dsm5.jpg" alt="Impacto 5" style="max-height: 100%; max-width: 100%;" />
+        </div>
+    </MudCarouselItem>
+</MudCarousel>

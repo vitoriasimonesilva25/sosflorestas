@@ -1,0 +1,58 @@
+﻿<MudCard>
+    <MudCardMedia Image="arvore.jpg" Height="200" />
+    <MudCardContent>
+        <MudText Typo="Typo.h5">O Silêncio que Devasta: A Melancolia do Desmatamento</MudText>
+        <MudText Typo="Typo.body2">Desmatamento é a perda silenciosa e devastadora de nossas florestas, onde cada árvore derrubada leva consigo um pedaço de história, um lar, uma sombra, uma vida. É o som abafado da serra substituindo o canto dos pássaros, o solo nu onde antes havia um ecossistema vibrante, o vazio deixado por rios que secam e espécies que desaparecem. É a ferida aberta na pele da Terra, sangrando o verde que nos sustenta e nos conecta, enquanto o mundo assiste, muitas vezes em silêncio.</MudText>
+        <MudText Typo="Typo.body2">Foto ilustrativa.</MudText>
+    </MudCardContent>
+    <MudCardActions>
+        @* <MudButton Variant="Variant.Text" Color="Color.Primary">Share</MudButton> *@
+        @* <MudButton Variant="Variant.Text" Color="Color.Primary">Learn More</MudButton> *@
+    </MudCardActions>
+</MudCard>
+
+<br />
+<div>
+    <MudText Typo="Typo.h4" Style="text-align:center">Ocorrido até o momento</MudText>
+
+</div>
+<br/>
+
+<MudTimeline>
+    <MudTimelineItem Color="Color.Info" Size="Size.Small">
+        <ItemOpposite>
+            <MudText Color="Color.Info" Typo="Typo.h5">2023</MudText>
+        </ItemOpposite>
+        <ItemContent>
+            <MudText Color="Color.Info" Typo="Typo.h6" GutterBottom="true">Pecuária e Expansão de Pastagens:</MudText>
+            <MudText>
+                Continuação da abertura de áreas para criação de gado na Amazônia, com mais de 90% do desmatamento destinado a pastagens; expansão agrícola (soja e milho) no Cerrado e Amazônia; uso do fogo para limpeza agrícola; e aumento da exploração madeireira e mineração ilegal no Pará e Rondônia.
+            </MudText>
+        </ItemContent>
+    </MudTimelineItem>
+    <MudTimelineItem Color="Color.Success" Size="Size.Small">
+        <ItemOpposite>
+            <MudText Color="Color.Success" Typo="Typo.h5">2024</MudText>
+        </ItemOpposite>
+        <ItemContent>
+            <MudText Color="Color.Success" Typo="Typo.h6" GutterBottom="true">Queimadas Intensificadas:</MudText>
+            <MudText>
+                Entre agosto e setembro de 2024, queimadas aumentaram a degradação da Amazônia em 497%; desmatamento reduziu no Pantanal (77,2%) e Cerrado (48,4%) de agosto a novembro devido à fiscalização; infraestrutura e urbanização, como rodovias e hidrelétricas, impactaram biomas; e expansão agrícola e pecuária suprimiu vegetação nativa no Pantanal e Cerrado.
+            </MudText>
+        </ItemContent>
+    </MudTimelineItem>
+    <MudTimelineItem Color="Color.Error" Size="Size.Small">
+        <ItemOpposite>
+            <MudText Color="Color.Error" Typo="Typo.h5">2025</MudText>
+        </ItemOpposite>
+        <ItemContent>
+            <MudText Color="Color.Error" Typo="Typo.h6" GutterBottom="true">Queda nos Alertas de Desmatamento na Amazônia:</MudText>
+            <MudText>
+                Fevereiro de 2025 registrou redução de 64,26% nos alertas de desmatamento, o menor índice da série histórica; porém, o Cerrado segue como o mais afetado pela conversão agrícola; garimpo e extração madeireira ilegal persistem ameaçando áreas preservadas; e queimadas controladas avançam, embora ainda sejam significativas em algumas regiões rurais.
+            </MudText>
+        </ItemContent>
+    </MudTimelineItem>
+</MudTimeline>
+@code {
+
+}

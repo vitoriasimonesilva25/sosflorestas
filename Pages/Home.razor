@@ -1,0 +1,117 @@
+﻿@page "/"
+@inject NavigationManager Navegacao
+
+
+
+
+<MudLayout>
+    <MudAppBar Elevation="1" style="background-color:#43A047"> 
+        <MudText Typo="Typo.h5" Class="ml-3">SoS Florestas</MudText> 
+        <MudSpacer />
+
+        <MudMenu Label="MAIS..." Variant="Variant.Filled" EndIcon="@Icons.Material.Filled.KeyboardArrowDown" Style="background-color:white">
+            <MudMenuItem Label="Página Inicial" @onclick=funcaoIrPaginaInicial/> 
+            <MudMenuItem Label="O Que é o Desmatamento?" @onclick=funcaoIrDesmatamento /> 
+            <MudMenuItem Label="Impactos do Desmatamento" @onclick=funcaoIrImpactoDesmatamento />
+            @* <MudMenuItem Label="Florestas em Perigo" @onclick=funcaoIrFlorestaPerigo /> *@
+            <MudMenuItem Label="Como Ajudar?" @onclick=funcaoIrComoAjudar />
+            @* <MudMenuItem Label="Histórias de Sucesso" @onclick=funcaoIrHistoriaSucesso /> *@
+        </MudMenu> 
+    </MudAppBar> 
+    <MudMainContent> 
+
+        @if(irPaginaInicial == true){
+            <PaginaInicial/>
+        }
+
+        @if (irDesmatamento== true)
+        {
+            <Desmatamento/>
+        }
+        
+
+        @if (irImpactoDesmatamento == true)
+        {
+            <Impacto />
+        }
+
+        @if (irFlorestaPerigo == true)
+        {
+            <FlorestaEmPerigo />
+        }
+
+        @if (irComoAjudar == true)
+        {
+            <ComoAjudar />
+        }
+
+        @if (irHistoriaSucesso == true)
+        {
+            <HistoriaSucesso />
+        }
+
+    </MudMainContent> 
+</MudLayout> 
+
+@code{
+    public bool irPaginaInicial = true;
+    public bool irDesmatamento  = false;
+    public bool irImpactoDesmatamento = false;
+    public bool irFlorestaPerigo = false;
+    public bool irComoAjudar = false;
+    public bool irHistoriaSucesso = false;
+
+    public void funcaoIrPaginaInicial(){
+    irPaginaInicial = true;
+    irDesmatamento = false;
+    irImpactoDesmatamento = false;
+    irFlorestaPerigo = false;
+    irComoAjudar = false;
+    irHistoriaSucesso = false;
+    }
+
+    public void funcaoIrDesmatamento()
+    {
+        irPaginaInicial = false;
+        irDesmatamento = true;
+        irImpactoDesmatamento = false;
+        irFlorestaPerigo = false;
+        irComoAjudar = false;
+        irHistoriaSucesso = false;
+    }
+
+    public void funcaoIrImpactoDesmatamento()
+    {
+        irPaginaInicial = false;
+        irDesmatamento = false;
+        irImpactoDesmatamento = true;
+        irFlorestaPerigo = false;
+        irComoAjudar = false;
+        irHistoriaSucesso = false;
+    }
+    public void funcaoIrFlorestaPerigo(){
+        irPaginaInicial = false;
+        irDesmatamento = false;
+        irImpactoDesmatamento = false;
+        irFlorestaPerigo = true;
+        irComoAjudar = false;
+        irHistoriaSucesso = false;
+    }
+    public void funcaoIrComoAjudar() { 
+        irPaginaInicial = false;
+        irDesmatamento = false;
+        irImpactoDesmatamento = false;
+        irFlorestaPerigo = false;
+        irComoAjudar = true;
+        irHistoriaSucesso = false;
+    }
+    public void funcaoIrHistoriaSucesso() { 
+        irPaginaInicial = false;
+        irDesmatamento = false;
+        irImpactoDesmatamento = false;
+        irFlorestaPerigo = false;
+        irComoAjudar = false;
+        irHistoriaSucesso = true;
+    }
+
+}
